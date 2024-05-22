@@ -46,3 +46,7 @@
   border: 2px solid rgb(213 219 215 / 1);
   color: #000;
 }
+
+.feature img {
+  border-radius: 50%;
+}

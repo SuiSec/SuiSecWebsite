@@ -31,15 +31,15 @@ const Partners = () => {
             </div>
           </a>
 
-          <a href="https://surf.tech/" target="_blank">
+          <a href="https://www.pinatabot.com/" target="_blank">
             <div className={styles.feature}>
               <Image
-                src="/images/surf.webp"
-                alt="surfwallet"
+                src="/images/pinatabot.jpg"
+                alt="pinatabot"
                 width={80}
                 height={80}
               />
-              <h3>Mysten Labs</h3>
+              <h3>Pinata Bot</h3>
             </div>
           </a>
         </div>
