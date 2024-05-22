@@ -1,0 +1,20 @@
+.features {
+  width: 1200px;
+  margin: 60px auto;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  @apply bg-white rounded-xl;
+}
+
+.feature h3 {
+  @apply font-semibold;
+}
+
+.feature img {
+  max-width: none;
+  transition: transform 0.3s;
+}
+
+.feature img:hover {
+  transform: scale(1.1);
+}

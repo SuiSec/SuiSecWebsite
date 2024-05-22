@@ -1,0 +1,34 @@
+.hero {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 2em;
+  max-width: 600px;
+}
+
+.banner {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.banner img {
+  transition: transform 0.3s;
+}
+
+.banner img:hover {
+  transform: scale(1.1);
+}
