@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className={styles.inner}>
         <a href="#home">
           <div className={styles.logo}>
-            <Image src="/images/logo.png" alt="SuiSec" width={16} height={16} />
+            <Image src="/images/logo.png" alt="SuiSec" width={40} height={40} />
             SuiSec
           </div>
         </a>

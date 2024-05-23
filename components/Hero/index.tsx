@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
         <div className="ml-20">
           <h1>Welcome to SuiSec</h1>
-          <p>Secure Sui, Secure Wallet</p>
+          <p>Secure Wallet, Secure User, Secure Sui</p>
         </div>
       </div>
     </section>
