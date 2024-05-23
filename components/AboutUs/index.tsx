@@ -5,7 +5,8 @@ const AboutUs = () => {
     <section id="about" className={styles.aboutUs}>
       <h2 className="text-4xl font-semibold mb-5">About Us</h2>
       <p className="text-gray-500">
-        We are the SuiSec team, dedicated to the security of the Sui ecosystem.
+        We are the <b>SuiSec</b> team, dedicated to the security of the Sui ecosystem.
+        <br />
         We collaborate closely with the Sui Security Team.
       </p>
     </section>

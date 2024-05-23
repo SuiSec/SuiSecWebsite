@@ -37,7 +37,7 @@ const Features = () => {
                   />
                 </a>
                 <a
-                  // href="https://github.com/SecureScan/SecureScan"
+                  href="https://github.com/RandyPen/SuiSecBlockList"
                   target="_blank"
                 >
                   <GitHubLogoIcon
@@ -83,7 +83,7 @@ const Features = () => {
                   />
                 </a>
                 <a
-                  // href="https://github.com/SecureScan/SecureScan"
+                  href="https://github.com/RandyPen/DryRunTransactionBlockResponsePlus"
                   target="_blank"
                 >
                   <GitHubLogoIcon
@@ -121,7 +121,7 @@ const Features = () => {
                 </p>
               </div>
               <div className="flex mt-10">
-                <a
+                {/* <a
                   // href="https://github.com/SecureScan/SecureScan"
                   target="_blank"
                 >
@@ -130,8 +130,8 @@ const Features = () => {
                     height={30}
                     className="cursor-pointer mr-5"
                   />
-                </a>
-                <a
+                </a> */}
+                {/* <a
                   // href="https://github.com/SecureScan/SecureScan"
                   target="_blank"
                 >
@@ -140,7 +140,7 @@ const Features = () => {
                     height={30}
                     className="cursor-pointer"
                   />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
