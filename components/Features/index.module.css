@@ -1,6 +1,11 @@
+.container {
+  padding-top: 120px;
+  padding-bottom: -120px;
+}
+
 .features {
   width: 1200px;
-  margin: 60px auto;
+  margin: 60px auto -60px auto;
   text-align: center;
   border: 1px solid #e5e7eb;
   @apply bg-white rounded-xl;
@@ -16,5 +21,5 @@
 }
 
 .feature img:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
