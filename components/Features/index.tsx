@@ -27,7 +27,7 @@ const Features = () => {
               </div>
               <div className="flex mt-10">
                 <a
-                  // href="https://github.com/SecureScan/SecureScan"
+                  href="https://pale-antimony-009.notion.site/SuiSecBlockList-b1ffc4ca2c0f4bb0857c5d169df234f0"
                   target="_blank"
                 >
                   <NotionLogoIcon
@@ -73,7 +73,7 @@ const Features = () => {
               </div>
               <div className="flex mt-10">
                 <a
-                  // href="https://github.com/SecureScan/SecureScan"
+                  href="https://pale-antimony-009.notion.site/DryRunTransactionBlockResponsePlus-82609f7e817a4018b722812aba3705bb"
                   target="_blank"
                 >
                   <NotionLogoIcon
