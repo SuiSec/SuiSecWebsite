@@ -31,6 +31,18 @@ const Partners = () => {
             </div>
           </a>
 
+          <a href="https://www.okx.com/web3/" target="_blank">
+            <div className={styles.feature}>
+              <Image
+                src="/images/OKX-Wallet.jpeg"
+                alt="okxwallet"
+                width={80}
+                height={80}
+              />
+              <h3>Okx Wallet</h3>
+            </div>
+          </a>
+
           <a href="https://suivision.xyz/" target="_blank">
             <div className={styles.feature}>
               <Image
