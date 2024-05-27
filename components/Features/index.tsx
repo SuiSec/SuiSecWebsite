@@ -38,7 +38,7 @@ const Features = () => {
                     />
                   </a>
                   <a
-                    href="https://github.com/RandyPen/SuiSecBlockList"
+                    href="https://github.com/SuiSec/SuiSecBlockList"
                     target="_blank"
                   >
                     <GitHubLogoIcon
@@ -88,7 +88,7 @@ const Features = () => {
                     />
                   </a>
                   <a
-                    href="https://github.com/RandyPen/DryRunTransactionBlockResponsePlus"
+                    href="https://github.com/SuiSec/DryRunTransactionBlockResponsePlus"
                     target="_blank"
                   >
                     <GitHubLogoIcon
