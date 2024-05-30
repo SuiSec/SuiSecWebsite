@@ -51,7 +51,19 @@ const Partners = () => {
                 width={80}
                 height={80}
               />
-              <h3>SUI Vision</h3>
+              <h3>Sui Vision</h3>
+            </div>
+          </a>
+
+          <a href="https://suiscan.xyz/" target="_blank">
+            <div className={styles.feature}>
+              <Image
+                src="/images/Suiscan-icon-color.svg"
+                alt="suiscan"
+                width={80}
+                height={80}
+              />
+              <h3>Sui Scan</h3>
             </div>
           </a>
 
