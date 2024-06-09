@@ -8,6 +8,7 @@ import {
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { getFullnodeUrl } from "@mysten/sui.js/client";
 import "@mysten/dapp-kit/dist/index.css";
+import { url } from "inspector";
 
 const queryClient = new QueryClient();
 // Config options for the networks you want to connect to
@@ -15,6 +16,7 @@ const { networkConfig } = createNetworkConfig({
   localnet: { url: getFullnodeUrl("localnet") },
   mainnet: { url: getFullnodeUrl("mainnet") },
   testnet: { url: getFullnodeUrl("testnet") },
+  riskControl: { url: "https://project-x-ucn8.onrender.com/sui/"},
 });
 
 export default function RootLayout({
@@ -23,16 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <QueryClientProvider client={queryClient}>
-          <SuiClientProvider networks={networkConfig} defaultNetwork="testnet">
-            <WalletProvider autoConnect={true}>
-              {children}
-            </WalletProvider>
-          </SuiClientProvider>
-        </QueryClientProvider>
-      </body>
-    </html>
+    <div>
+      <QueryClientProvider client={queryClient}>
+        <SuiClientProvider networks={networkConfig} defaultNetwork="testnet">
+          <WalletProvider autoConnect={true}>{children}</WalletProvider>
+        </SuiClientProvider>
+      </QueryClientProvider>
+    </div>
   );
 }
