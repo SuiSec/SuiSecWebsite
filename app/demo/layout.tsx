@@ -8,7 +8,6 @@ import {
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { getFullnodeUrl } from "@mysten/sui.js/client";
 import "@mysten/dapp-kit/dist/index.css";
-import { url } from "inspector";
 
 const queryClient = new QueryClient();
 // Config options for the networks you want to connect to

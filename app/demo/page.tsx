@@ -1,6 +1,13 @@
 "use client";
 
-import { ConnectButton, useCurrentAccount, useSuiClient, useSuiClientContext } from "@mysten/dapp-kit";
+import { Separator } from "@/components/ui/separator";
+import {
+  ConnectButton,
+  useCurrentAccount,
+  useSignAndExecuteTransactionBlock,
+  useSignTransactionBlock,
+  useSuiClientContext,
+} from "@mysten/dapp-kit";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Select,
@@ -11,18 +18,59 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import { demoApi } from "@/api/demo";
+import { useEffect, useState } from "react";
+import { DemoData } from "@/types";
 
 const Demo = () => {
   const ctx = useSuiClientContext();
   const router = useRouter();
   const currentAccount = useCurrentAccount();
+  const [result, setResult] = useState<DemoData>();
+  const [txBlockUrl, setTxBlockUrl] = useState<string>("");
+  const [innerHeight, setInnerHeight] = useState<number>();
+  const [innerWidth, setInnerWidth] = useState<number>();
+  const { mutate: signAndExecuteTransactionBlock } =
+    useSignAndExecuteTransactionBlock();
+
+  useEffect(() => {
+    setInnerHeight(window.innerHeight-800);
+    setInnerWidth(window.innerWidth-600);
+    ctx.selectNetwork("mainnet");
+  }, []);
+
   const handelSelect = (value: string) => {
-    ctx.selectNetwork(value)
+    setResult(undefined);
+    ctx.selectNetwork(value);
   };
-  const handelExecute = () => {
+  const handelExecute = async () => {
     console.log("executeTransactionBlock");
+    const txb = demoApi();
+
+    await signAndExecuteTransactionBlock(
+      {
+        transactionBlock: txb,
+        options: {
+          showEvents: true,
+        },
+      },
+      {
+        onSuccess: (data) => {
+          console.log(data.digest);
+          const result: DemoData = data.digest as unknown as DemoData;
+          if (result.Error !== undefined) {
+            setResult(result);
+          } else {
+            const url =
+              "https://suivision.xyz/txblock/" + data.digest + "?tab=Changes";
+            setTxBlockUrl(url);
+            console.log(url);
+          }
+        },
+      }
+    );
   };
-  
+
   return (
     <div className="flex flex-col">
       <div className="flex flex-row p-10 justify-between">
@@ -42,7 +90,12 @@ const Demo = () => {
               <CardTitle>Demo Summary</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>Todo: Add Demo Summary</p>
+              <p>
+                This demo is used to test the difference between Mainnet RPC
+                and our Risk Control RPC. The demo will try to execute a SCAM
+                contract on the mainnet. The Mainnet RPC will execute normally,
+                while our Risk Control RPC will block the execution.
+              </p>
             </CardContent>
           </Card>
           <Select onValueChange={handelSelect} defaultValue="mainnet">
@@ -70,9 +123,29 @@ const Demo = () => {
               <CardTitle>Executed Result</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="h-96">
-                <p>Todo: Add Demo Summary</p>
-              </div>
+              {result?.Error == undefined ? (
+                <div>
+                  <iframe
+                    width={innerWidth}
+                    height={innerHeight}
+                    allowFullScreen
+                    src={txBlockUrl}
+                  ></iframe>
+                </div>
+              ) : (
+                <div className="h-96 tracking-wide text-lg space-y-3">
+                  <h1 className="text-red-600">{result?.Error?.name}:</h1>
+                  <p>{result?.Error?.message}</p>
+                  <Separator className="my-2"></Separator>
+                  <h1 className="text-red-600">AnalyzeredData:</h1>
+                  <h4 className="text-blue-500">Sender:</h4>
+                  <p> {result?.analyzeredData?.sender}</p>
+                  <h4 className="text-blue-500">CallPackage: </h4>
+                  <p>{result?.analyzeredData?.callPackages}</p>
+                  <h4 className="text-blue-500">Method: </h4>
+                  <p>{result?.suiRequestBody.method}</p>
+                </div>
+              )}
             </CardContent>
           </Card>
         </div>
