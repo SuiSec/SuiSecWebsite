@@ -47,11 +47,11 @@ const Partners = () => {
             <div className={styles.feature}>
               <Image
                 src="/images/sui-coin.png"
-                alt="suicoins"
+                alt="sui-coins"
                 width={80}
                 height={80}
               />
-              <h3>SuiCoins</h3>
+              <h3>Sui Coins</h3>
             </div>
           </a>
 
