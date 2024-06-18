@@ -43,6 +43,18 @@ const Partners = () => {
             </div>
           </a>
 
+          <a href="https://www.suicoins.com/" target="_blank">
+            <div className={styles.feature}>
+              <Image
+                src="/images/sui-coin.png"
+                alt="suicoins"
+                width={80}
+                height={80}
+              />
+              <h3>SuiCoins</h3>
+            </div>
+          </a>
+
           <a href="https://suivision.xyz/" target="_blank">
             <div className={styles.feature}>
               <Image
