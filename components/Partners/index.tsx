@@ -55,6 +55,18 @@ const Partners = () => {
             </div>
           </a>
 
+          <a href="https://scallop.io/" target="_blank">
+            <div className={styles.feature}>
+              <Image
+                src="/images/scallop.png"
+                alt="scallop"
+                width={80}
+                height={80}
+              />
+              <h3>Scallop</h3>
+            </div>
+          </a>
+
           <a href="https://suivision.xyz/" target="_blank">
             <div className={styles.feature}>
               <Image
