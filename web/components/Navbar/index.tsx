@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./index.module.css";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -28,7 +29,7 @@ const Navbar = () => {
             <a href="#about">About Us</a>
           </li>
           <li>
-            <a href="/demo">Demo</a>
+            <Link href="/demo">Demo</Link>
           </li>
         </ul>
       </div>
