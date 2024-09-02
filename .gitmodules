@@ -1,4 +1,0 @@
-[submodule "walrus-sites"]
-	path = walrus-sites
-	url = https://github.com/MystenLabs/walrus-sites.git
-	branch = main
