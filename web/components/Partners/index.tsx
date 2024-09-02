@@ -102,6 +102,30 @@ const Partners = () => {
               <h3>Pinata Bot</h3>
             </div>
           </a>
+
+          <a href="https://nightly.app/" target="_blank">
+            <div className={styles.feature}>
+              <Image
+                src="/images/Nightly.png"
+                alt="nightly"
+                width={80}
+                height={80}
+              />
+              <h3>Nightly Wallet</h3>
+            </div>
+          </a>
+
+          <a href="https://getnimbus.io/" target="_blank">
+            <div className={styles.feature}>
+              <Image
+                src="/images/nimbus.png"
+                alt="nimbus"
+                width={80}
+                height={80}
+              />
+              <h3>Nimbus</h3>
+            </div>
+          </a>
         </div>
       </div>
     </section>
