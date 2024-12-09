@@ -67,6 +67,30 @@ const Partners = () => {
             </div>
           </a>
 
+          <a href="https://naviprotocol.io/" target="_blank">
+            <div className={styles.feature}>
+              <Image
+                src="/images/navi.jpg"
+                alt="navi"
+                width={80}
+                height={80}
+              />
+              <h3>Navi</h3>
+            </div>
+          </a>
+
+          <a href="https://suilend.fi/" target="_blank">
+            <div className={styles.feature}>
+              <Image
+                src="/images/suilend.png"
+                alt="suilend"
+                width={80}
+                height={80}
+              />
+              <h3>SuiLend</h3>
+            </div>
+          </a>
+
           <a href="https://suivision.xyz/" target="_blank">
             <div className={styles.feature}>
               <Image
