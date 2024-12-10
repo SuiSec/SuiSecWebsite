@@ -31,7 +31,7 @@ const Partners = () => {
             </div>
           </a>
 
-          <a href="https://www.okx.com/web3/" target="_blank">
+          {/* <a href="https://www.okx.com/web3/" target="_blank">
             <div className={styles.feature}>
               <Image
                 src="/images/OKX-Wallet.jpeg"
@@ -41,7 +41,7 @@ const Partners = () => {
               />
               <h3>Okx Wallet</h3>
             </div>
-          </a>
+          </a> */}
 
           <a href="https://nightly.app/" target="_blank">
             <div className={styles.feature}>
