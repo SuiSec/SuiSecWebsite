@@ -43,15 +43,27 @@ const Partners = () => {
             </div>
           </a>
 
-          <a href="https://www.suicoins.com/" target="_blank">
+          <a href="https://nightly.app/" target="_blank">
             <div className={styles.feature}>
               <Image
-                src="/images/sui-coin.png"
-                alt="sui-coins"
+                src="/images/Nightly.png"
+                alt="nightly"
                 width={80}
                 height={80}
               />
-              <h3>Sui Coins</h3>
+              <h3>Nightly Wallet</h3>
+            </div>
+          </a>
+
+          <a href="https://www.cetus.zone/" target="_blank">
+            <div className={styles.feature}>
+              <Image
+                src="/images/cetus.jpeg"
+                alt="cetus"
+                width={80}
+                height={80}
+              />
+              <h3>Cetus</h3>
             </div>
           </a>
 
@@ -91,6 +103,30 @@ const Partners = () => {
             </div>
           </a>
 
+          <a href="https://www.insidex.trade/" target="_blank">
+            <div className={styles.feature}>
+              <Image
+                src="/images/insidex.png"
+                alt="insidex"
+                width={80}
+                height={80}
+              />
+              <h3>InsiDex</h3>
+            </div>
+          </a>
+
+          <a href="https://www.suicoins.com/" target="_blank">
+            <div className={styles.feature}>
+              <Image
+                src="/images/sui-coin.png"
+                alt="sui-coins"
+                width={80}
+                height={80}
+              />
+              <h3>Sui Coins</h3>
+            </div>
+          </a>
+
           <a href="https://suivision.xyz/" target="_blank">
             <div className={styles.feature}>
               <Image
@@ -115,6 +151,18 @@ const Partners = () => {
             </div>
           </a>
 
+          <a href="https://getnimbus.io/" target="_blank">
+            <div className={styles.feature}>
+              <Image
+                src="/images/nimbus.png"
+                alt="nimbus"
+                width={80}
+                height={80}
+              />
+              <h3>Nimbus</h3>
+            </div>
+          </a>
+
           <a href="https://www.pinatabot.com/" target="_blank">
             <div className={styles.feature}>
               <Image
@@ -127,29 +175,6 @@ const Partners = () => {
             </div>
           </a>
 
-          <a href="https://nightly.app/" target="_blank">
-            <div className={styles.feature}>
-              <Image
-                src="/images/Nightly.png"
-                alt="nightly"
-                width={80}
-                height={80}
-              />
-              <h3>Nightly Wallet</h3>
-            </div>
-          </a>
-
-          <a href="https://getnimbus.io/" target="_blank">
-            <div className={styles.feature}>
-              <Image
-                src="/images/nimbus.png"
-                alt="nimbus"
-                width={80}
-                height={80}
-              />
-              <h3>Nimbus</h3>
-            </div>
-          </a>
         </div>
       </div>
     </section>
